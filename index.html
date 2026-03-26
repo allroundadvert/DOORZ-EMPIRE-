@@ -14,7 +14,13 @@ body{
 }
 :root{--gold:#d4af37}
 
-/* HERO (removed) */
+/* HERO */
+.hero{
+  width:100%;
+  height:320px;
+  background:url('https://raw.githubusercontent.com/allroundadvert/DOORZ-EMPIRE-/2cbc3b259bf0b03765dca4993273c8526272f765/1774524719196.png') center/cover no-repeat;
+  border-bottom:4px solid var(--gold);
+}
 
 /* INFO */
 .info{
@@ -137,14 +143,14 @@ footer{
 
 <body>
 
-<!-- HERO REMOVED -->
+<div class="hero"></div>
 
 <div class="info">
 <h2>Doorz Empire</h2>
 <p>Giant in high quality Doors</p>
 </div>
 
-<!-- STATIC IMAGES (kept all) -->
+<!-- STATIC IMAGES -->
 <div class="gallery">
 <img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0031.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0032.jpg">
@@ -173,7 +179,7 @@ footer{
 <iframe src="https://www.google.com/maps?q=Former+deputy+junction+along+the+express+beside+nnpc+fuel+station+asaba+delta+state&output=embed"></iframe>
 </div>
 
-<!-- FORM WITH SPECIFICATIONS AND ADDRESS -->
+<!-- FORM -->
 <div class="form-box">
 <h2>Booking & Order Form</h2>
 <form onsubmit="send();return false;">
@@ -214,7 +220,6 @@ footer{
 <option>No installation</option>
 </select>
 
-<!-- ✅ NEW FIELD: Customer Address -->
 <label>Customer Address</label>
 <input id="customerAddress" placeholder="Street / City / State">
 
@@ -236,7 +241,6 @@ function send(){
   const install = document.getElementById("install").value;
   const address = document.getElementById("customerAddress").value;
 
-  // Get checked door types
   const doorElems = document.querySelectorAll('#door input[type="checkbox"]:checked');
   const doorSelected = Array.from(doorElems).map(d=>d.value).join(', ');
 
