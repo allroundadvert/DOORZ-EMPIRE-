@@ -21,7 +21,7 @@ body{
   align-items:center;
   width:100%;
   max-height:320px;
-  background-color:#0a0a0a;
+  background:#0a0a0a;
   border-bottom:4px solid var(--gold);
 }
 .hero img{
@@ -33,11 +33,12 @@ body{
 /* INFO */
 .info{
   text-align:center;
-  padding:30px 20px;
+  padding:10px 15px;
 }
-.info h2{color:var(--gold)}
+.info h2{color:var(--gold); margin-bottom:5px;}
+.info p{margin-top:0;}
 
-/* STATIC GALLERY */
+/* GALLERY */
 .gallery{
   max-width:1100px;
   margin:30px auto;
@@ -53,7 +54,7 @@ body{
   box-shadow:0 0 12px rgba(212,175,55,.25);
 }
 
-/* MOVING TWO IMAGES LOOP LEFT-RIGHT */
+/* MOVING IMAGES */
 .moving-wrap{
   overflow:hidden;
   max-width:1100px;
@@ -108,7 +109,6 @@ input,select,textarea{
 }
 textarea{
   min-height:100px;
-  resize:vertical;
 }
 button{
   margin-top:25px;
@@ -130,7 +130,7 @@ button{
 }
 
 /* FLOATING BUTTONS */
-.whatsapp,.call,.facebook{
+.whatsapp,.facebook{
   position:fixed;
   right:18px;
   padding:14px 18px;
@@ -140,7 +140,6 @@ button{
   font-weight:700;
 }
 .whatsapp{bottom:90px;background:#25d366}
-.call{bottom:30px;background:#2563eb}
 .facebook{bottom:150px;background:#1877f2}
 
 footer{
@@ -154,27 +153,18 @@ footer{
 
 <body>
 
-<!-- HERO IMAGE -->
+<!-- HEADER -->
 <div class="hero">
-  <img src="https://raw.githubusercontent.com/allroundadvert/DOORZ-EMPIRE-/2cbc3b259bf0b03765dca4993273c8526272f765/1774524719196.png" alt="Doorz Empire">
+<img src="https://raw.githubusercontent.com/allroundadvert/DOORZ-EMPIRE-/2cbc3b259bf0b03765dca4993273c8526272f765/1774524719196.png">
 </div>
 
 <div class="info">
-<h2>Doorz Empire</h2>
-<p>Giant in high quality Doors</p>
+<h2>DOORZ EMPIRE</h2>
+<p>Giant Ina all kinds of Doors of different categories you can think of. Tested and Trusted.</p>
 </div>
 
-<!-- MOVING TWO IMAGES FIRST -->
-<div class="moving-wrap">
-<div class="moving-track">
-<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0035.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0036.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0035.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0036.jpg">
-</div>
-</div>
+<!-- ALL IMAGES ABOVE FORM -->
 
-<!-- STATIC IMAGES -->
 <div class="gallery">
 <img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0031.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0032.jpg">
@@ -190,7 +180,16 @@ footer{
 <img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0045.jpg">
 </div>
 
-<!-- FORM WITH MAP BELOW DOOR TYPE -->
+<div class="moving-wrap">
+<div class="moving-track">
+<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0035.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0036.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0035.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0036.jpg">
+</div>
+</div>
+
+<!-- FORM -->
 <div class="form-box">
 <h2>Booking & Order Form</h2>
 <form onsubmit="send();return false;">
@@ -216,28 +215,27 @@ footer{
 <label><input type="checkbox" value="Double door"> Double door</label>
 </div>
 
-<!-- MAP UNDER DOOR TYPE -->
 <div class="map">
 <iframe src="https://www.google.com/maps?q=Former+deputy+junction+along+the+express+beside+nnpc+fuel+station+asaba+delta+state&output=embed"></iframe>
 </div>
 
 <label>Specifications</label>
-<textarea id="specifications" placeholder="Size, color, design preference, special request, etc"></textarea>
+<textarea id="specifications"></textarea>
 
 <label>Delivery</label>
 <select id="delivery">
-<option>Yes, I want delivery</option>
-<option>No delivery</option>
+<option>Yes</option>
+<option>No</option>
 </select>
 
 <label>Installation</label>
 <select id="install">
-<option>Yes, installation needed</option>
-<option>No installation</option>
+<option>Yes</option>
+<option>No</option>
 </select>
 
 <label>Customer Address</label>
-<input id="customerAddress" placeholder="Street / City / State">
+<input id="customerAddress">
 
 <button>Submit via WhatsApp</button>
 </form>
@@ -257,19 +255,18 @@ function send(){
   const install = document.getElementById("install").value;
   const address = document.getElementById("customerAddress").value;
 
-  const doorElems = document.querySelectorAll('#door input[type="checkbox"]:checked');
-  const doorSelected = Array.from(doorElems).map(d=>d.value).join(', ');
+  const doors = [...document.querySelectorAll('#door input:checked')]
+    .map(d=>d.value).join(', ');
 
-  const msg =
-`Name: ${name}
+  const msg = `Name: ${name}
 Phone: ${phone}
-Door Types: ${doorSelected}
-Specifications: ${specs}
+Door: ${doors}
+Specs: ${specs}
 Delivery: ${delivery}
-Installation: ${install}
+Install: ${install}
 Address: ${address}`;
 
-  window.open("https://wa.me/2347034433503?text="+encodeURIComponent(msg), "_blank");
+  window.open("https://wa.me/2347034433503?text="+encodeURIComponent(msg));
 }
 </script>
 
