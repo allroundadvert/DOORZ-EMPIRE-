@@ -16,11 +16,18 @@ body{
 
 /* HERO */
 .hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
   width:100%;
-  height:auto;
   max-height:320px;
-  background:url('https://raw.githubusercontent.com/allroundadvert/DOORZ-EMPIRE-/2cbc3b259bf0b03765dca4993273c8526272f765/1774524719196.png') center center/contain no-repeat;
+  background-color:#0a0a0a;
   border-bottom:4px solid var(--gold);
+}
+.hero img{
+  max-width:100%;
+  max-height:320px;
+  object-fit:contain;
 }
 
 /* INFO */
@@ -46,7 +53,7 @@ body{
   box-shadow:0 0 12px rgba(212,175,55,.25);
 }
 
-/* MOVING TWO IMAGES */
+/* MOVING TWO IMAGES LOOP LEFT-RIGHT */
 .moving-wrap{
   overflow:hidden;
   max-width:1100px;
@@ -56,7 +63,8 @@ body{
 }
 .moving-track{
   display:flex;
-  animation:slide 18s ease-in-out infinite alternate;
+  width:max-content;
+  animation:slide 10s linear infinite;
 }
 .moving-track img{
   width:50vw;
@@ -67,8 +75,9 @@ body{
   border:2px solid var(--gold);
 }
 @keyframes slide{
-  from{transform:translateX(0)}
-  to{transform:translateX(-40%)}
+  0%{transform:translateX(0);}
+  50%{transform:translateX(-50%);}
+  100%{transform:translateX(0);}
 }
 
 /* FORM */
@@ -145,7 +154,10 @@ footer{
 
 <body>
 
-<div class="hero"></div>
+<!-- HERO IMAGE -->
+<div class="hero">
+  <img src="https://raw.githubusercontent.com/allroundadvert/DOORZ-EMPIRE-/2cbc3b259bf0b03765dca4993273c8526272f765/1774524719196.png" alt="Doorz Empire">
+</div>
 
 <div class="info">
 <h2>Doorz Empire</h2>
@@ -155,6 +167,8 @@ footer{
 <!-- MOVING TWO IMAGES FIRST -->
 <div class="moving-wrap">
 <div class="moving-track">
+<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0035.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0036.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0035.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/c8cc3ec9be3e6d818bc15545463c84549b80dcaf/.github/workflows/IMG-20260121-WA0036.jpg">
 </div>
